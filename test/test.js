@@ -21,13 +21,21 @@ describe('SuperFizzBuzz Class', function() {
   });
 
   describe('Initialized with Arguments', function() {
-    let advancedFizzBuzz = new SuperFizzBuzz(-12, 145, null, [{word: "Fizz", num: 3}, {word: "Buzz", num:7}, {word: "Bazz", num:38}]);
+    let advancedFizzBuzz = new SuperFizzBuzz(-12, 145, null, [{word: "Frog", num: 5}, {word: "Bat", num:11}, {word: "Umbrella", num:38}]);
 
     it('When min is provided, SuperFizzBuzz is initialized with that value instead of the default', function() {
       assert.equal(advancedFizzBuzz.min, -12);
     });
     it('When max is provided, SuperFizzBuzz is initialized with that value instead of the default', function() {
       assert.equal(advancedFizzBuzz.max, 145);
+    });
+    it('When wordNums is provided, SuperFizzBuzz is initialized with that value instead of default', function() {
+      assert.equal(advancedFizzBuzz.wordNums[0].word, "Frog");
+      assert.equal(advancedFizzBuzz.wordNums[0].num, 5);
+      assert.equal(advancedFizzBuzz.wordNums[1].word, "Bat");
+      assert.equal(advancedFizzBuzz.wordNums[1].num, 11);
+      assert.equal(advancedFizzBuzz.wordNums[2].word, "Umbrella");
+      assert.equal(advancedFizzBuzz.wordNums[2].num, 38);
     });
   });
 });
