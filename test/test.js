@@ -26,6 +26,8 @@ describe('SuperFizzBuzz Class', function() {
     it('When min is provided, SuperFizzBuzz is initialized with that value instead of the default', function() {
       assert.equal(advancedFizzBuzz.min, -12);
     });
-    
+    it('When max is provided, SuperFizzBuzz is initialized with that value instead of the default', function() {
+      assert.equal(advancedFizzBuzz.max, 145);
+    });
   });
 });
